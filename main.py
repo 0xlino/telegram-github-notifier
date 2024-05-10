@@ -21,6 +21,7 @@ def telegram_send_message(message, inline_keyboard=[]):
         telegram_base_url + Env.TELEGRAM_BOT_TOKEN + "/sendMessage",
         json={
             "chat_id": Env.TELEGRAM_CHAT_ID,
+            "message_thread_id": 128,
             "text": message,
             "parse_mode": "Markdown",
             "reply_markup": {
